@@ -22,7 +22,7 @@ class SistemInventaris {
         if (produkDb.containsKey(idProduk)) {
             return "GAGAL: ID Produk (" + idProduk + ") sudah terdaftar di sistem!";
         }
-        Produk produk = new Produk(nama, harga, stok);
+        Produk produk = new Produk(idProduk, nama, harga, stok);
         produkDb.put(idProduk, produk);
         return "SUKSES: Produk berhasil ditambahkan ke dalam database.";
     }
